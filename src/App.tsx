@@ -12,6 +12,11 @@ import gitIcon from "./assets/git-logo.svg";
 import pythonIcon from "./assets/python-logo.svg";
 import flutterIcon from "./assets/flutter-logo.svg";
 import CardProject from "./components/Card-Project";
+import linkedinIcon from "./assets/linkedin-logo.svg"
+import instagramIcon from "./assets/instagram-logo.svg"
+import gitHubIcon from "./assets/github-logo.svg";
+import emailIcon from "./assets/envelope-logo.svg";
+import CardContact from "./components/Card-Contact";
 
 export default function App() {
   const projects = [
@@ -19,31 +24,37 @@ export default function App() {
       name: "MentisAI",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
+      url: ''
     },
     {
       name: "MentisAI",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
+      url: ''
     },
     {
       name: "MentisAI",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
+      url: ''
     },
     {
       name: "MentisAI",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
+      url: ''
     },
     {
       name: "MentisAI",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
+      url: ''
     },
     {
       name: "MentisAI",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
+      url: ''
     },
     
   ];
@@ -68,6 +79,25 @@ export default function App() {
       { nameTech: "Flutter", icon: flutterIcon },
     ],
   ];
+
+  const cardsContacts = [
+    {
+      icon: linkedinIcon,
+      name: "Linkedin"
+    }, 
+    {
+      icon: instagramIcon, 
+      name: "Instagram",
+    },
+    {
+      icon: gitHubIcon, 
+      name: "GitHub",
+    },
+    {
+      icon: emailIcon, 
+      name: "E-mail",
+    },
+  ]
 
   return (
     <div className="p-8 bg-[#16181d]">
@@ -166,15 +196,26 @@ export default function App() {
       </section>
 
       {/* Seção de contato */}
-      <section className="" id="contato">
+      <section className="">
         <h2 className="font-bold text-gray-100 text-3xl text-center mb-4">Gostou do meu trabalho?</h2>
-        <p className='text-gray-100 m-auto max-w-[400px]'>
+        <p className='text-gray-100 m-auto max-w-md mb-8'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
           perferendis neque, tempora impedit eum perspiciatis praesentium,
           reiciendis error magni obcaecati fugiat non, consectetur delectus
           labore itaque quos adipisci corporis maiores?
         </p>
-        <div></div>
+        <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
+          {cardsContacts.map((card) => {
+            return (
+              <CardContact 
+                key={card.name}
+                icon={card.icon}  
+                name={card.name}
+                // url={card.url}
+              />
+            )
+          })}
+        </div>
       </section>
     </div>
   );
