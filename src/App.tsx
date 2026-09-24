@@ -12,8 +12,8 @@ import gitIcon from "./assets/git-logo.svg";
 import pythonIcon from "./assets/python-logo.svg";
 import flutterIcon from "./assets/flutter-logo.svg";
 import CardProject from "./components/Card-Project";
-import linkedinIcon from "./assets/linkedin-logo.svg"
-import instagramIcon from "./assets/instagram-logo.svg"
+import linkedinIcon from "./assets/linkedin-logo.svg";
+import instagramIcon from "./assets/instagram-logo.svg";
 import gitHubIcon from "./assets/github-logo.svg";
 import emailIcon from "./assets/envelope-logo.svg";
 import CardContact from "./components/Card-Contact";
@@ -23,81 +23,69 @@ export default function App() {
     {
       name: "MentisAI",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
-      url: ''
+        "Plataforma inteligente para análise preditiva utilizando modelos de Machine Learning e processamento de dados em tempo real.",
+      tags: ["Python", "PyTorch", "React", "TypeScript"],
+      githubUrl: "https://github.com/willianfurtado/mentisAI",
+      image: "/src/assets/projects/mentis.png", // opcional
     },
     {
-      name: "MentisAI",
+      name: "Portfolio Dev",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
-      url: ''
+        "Portfólio interativo construído com React, Tailwind CSS e TypeScript para apresentar projetos e competências de software.",
+      tags: ["React", "TypeScript", "Tailwind"],
+      githubUrl: "https://github.com/seu-usuario/portfolio",
     },
-    {
-      name: "MentisAI",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
-      url: ''
-    },
-    {
-      name: "MentisAI",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
-      url: ''
-    },
-    {
-      name: "MentisAI",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
-      url: ''
-    },
-    {
-      name: "MentisAI",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quis perspiciatis iusto, fugit sit deserunt velit quia consequatur, quam voluptate inventore ex ab voluptas libero sint id atque nihil quos?",
-      url: ''
-    },
-    
   ];
 
-  const skillsRows = [
+  const skillsCategories = [
     // Linha 1
-    [
-      { nameTech: "Javascript", icon: jsIcon },
-      { nameTech: "Typescript", icon: tsIcon },
-      { nameTech: "React", icon: reactIcon },
-      { nameTech: "NodeJS", icon: nodeIcon },
-    ],
-    // Linha 2
-    [
-      { nameTech: "HTML", icon: htmlIcon },
-      { nameTech: "CSS", icon: cssIcon },
-      { nameTech: "GIT", icon: gitIcon },
-    ],
-    // Linha 3
-    [
-      { nameTech: "Python", icon: pythonIcon },
-      { nameTech: "Flutter", icon: flutterIcon },
-    ],
+    {
+      title: "IA & Machine Learning",
+      skills: [
+        { nameTech: "Python", icon: pythonIcon },
+        { nameTech: "Pytorch", icon: tsIcon },
+        { nameTech: "Scikit-Learn", icon: reactIcon },
+        { nameTech: "Pandas", icon: nodeIcon },
+      ],
+    },
+    {
+      title: "Desenvolvimento Web & Mobile",
+      skills: [
+        { nameTech: "Javascript", icon: jsIcon },
+        { nameTech: "Typescript", icon: tsIcon },
+        { nameTech: "React", icon: reactIcon },
+        { nameTech: "NodeJS", icon: nodeIcon },
+        { nameTech: "Flutter", icon: flutterIcon },
+      ],
+    },
+    {
+      title: "Ferramentas & Outros",
+      skills: [
+        { nameTech: "HTML", icon: htmlIcon },
+        { nameTech: "CSS", icon: cssIcon },
+        { nameTech: "GIT", icon: gitIcon },
+      ],
+    },
   ];
 
   const cardsContacts = [
     {
       icon: linkedinIcon,
-      name: "Linkedin"
-    }, 
+      name: "Linkedin",
+    },
     {
-      icon: instagramIcon, 
+      icon: instagramIcon,
       name: "Instagram",
     },
     {
-      icon: gitHubIcon, 
+      icon: gitHubIcon,
       name: "GitHub",
     },
     {
-      icon: emailIcon, 
+      icon: emailIcon,
       name: "E-mail",
     },
-  ]
+  ];
 
   return (
     <div className="p-8 bg-[#16181d]">
@@ -119,22 +107,51 @@ export default function App() {
       </nav>
 
       {/* Seção principal de apresentação */}
-      <main className="flex-1 flex items-center justify-center max-w-6xl mx-auto w-full py-12">
-        <section className="grid grid-cols-1 md: grid-cols-2 gap-12 items-center w-full">
-          <div className="flex flex-col gap-6">
-            <h1 className="text-5xl md:text-7xl font-light tracking-wide text-gray-200">
-              Olá, sou <br /> Willian Jorge
-            </h1>
-            <p className="text-gray-200 text-sm leading-relaxed max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              harum! Soluta, est similique? Rem sit maiores non, quod nemo iure
-              architecto, sunt dolores corrupti consequuntur, perferendis
-              distinctio cumque modi deleniti!{" "}
+      <main className="flex items-center justify-center min-h-[85vh] py-12 px-6 max-w-6xl mx-auto w-full">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+          {/* Lado Esquerdo: Conteúdo */}
+          <div className="flex flex-col gap-5 items-start">
+            {/* Título e Cargo */}
+            <div>
+              <h1 className="text-4xl md:text-6xl font-light tracking-wide text-gray-200 leading-tight">
+                Olá, sou <br />
+                <span className="font-bold text-white">Willian Jorge</span>
+              </h1>
+              <p className="text-lg md:text-xl text-cyan-400 font-medium mt-2">
+                Software Developer | AI & Machine Learning
+              </p>
+            </div>
+
+            {/* Descrição Real */}
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-lg">
+              Desenvolvo soluções de software completas e inteligentes,
+              combinando a criação de aplicações web modernas com a aplicação de
+              Inteligência Artificial e Machine Learning para resolver problemas
+              complexos.
             </p>
+
+            {/* Botões de Ação */}
+            <div className="flex flex-wrap gap-4 pt-2">
+              <a
+                href="#projetos"
+                className="bg-white text-zinc-950 hover:bg-zinc-200 px-6 py-3 rounded-xl font-medium text-sm transition-all shadow-md"
+              >
+                Ver Projetos
+              </a>
+              <a
+                href="/curriculo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-zinc-700 text-zinc-300 hover:bg-zinc-800/60 px-6 py-3 rounded-xl font-medium text-sm transition-all"
+              >
+                Download Currículo
+              </a>
+            </div>
           </div>
 
+          {/* Lado Direito: Foto */}
           <div className="relative flex justify-center md:justify-end items-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-zinc-800">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-zinc-800 shadow-2xl">
               <img
                 src="src/assets/my-photo.png"
                 alt="Willian Jorge"
@@ -146,30 +163,32 @@ export default function App() {
       </main>
 
       {/* Seção de skills */}
-      <section className="flex flex-col items-center py-12">
-        <h2 className="font-bold text-3xl text-center mb-8 text-white">
+      <section className="flex flex-col items-center py-16 px-4">
+        <h2 className="font-bold text-3xl md:text-4xl text-center mb-10 text-white">
           Skills
         </h2>
 
-        <div className="flex flex-col items-center gap-4 w-full px-4">
-          {skillsRows.map((row, rowIndex) => {
-            return (
-              <div
-                key={rowIndex}
-                className="flex flex-wrap justify-center items-center gap-4"
-              >
-                {row.map((skill) => {
-                  return (
-                    <CardTech
-                      key={skill.nameTech}
-                      icon={skill.icon}
-                      nameTech={skill.nameTech}
-                    />
-                  );
-                })}
+        <div className="flex flex-col items-center gap-8 w-full max-w-4xl">
+          {skillsCategories.map((category) => (
+            <div
+              key={category.title}
+              className="flex flex-col items-center gap-4"
+            >
+              <h3 className="text-zinc-400 text-sm font-medium uppercase tracking-wider">
+                {category.title}
+              </h3>
+
+              <div className="flex flex-wrap justify-center items-center gap-3">
+                {category.skills.map((skill) => (
+                  <CardTech
+                    key={skill.nameTech}
+                    icon={skill.icon}
+                    nameTech={skill.nameTech}
+                  />
+                ))}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -183,37 +202,38 @@ export default function App() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl px-4 justify-items-center">
-          {projects.map((project) => {
-            return (
-              <CardProject
-                key={project.name}
-                name={project.name}
-                description={project.description}
-              />
-            );
-          })}
+          {projects.map((project) => (
+            <CardProject
+              key={project.name}
+              name={project.name}
+              description={project.description}
+              tags={project.tags}
+              githubUrl={project.githubUrl}
+              image={project.image}
+            />
+          ))}
         </div>
       </section>
 
       {/* Seção de contato */}
       <section className="">
-        <h2 className="font-bold text-gray-100 text-3xl text-center mb-4">Gostou do meu trabalho?</h2>
-        <p className='text-gray-100 m-auto max-w-md mb-8'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
-          perferendis neque, tempora impedit eum perspiciatis praesentium,
-          reiciendis error magni obcaecati fugiat non, consectetur delectus
-          labore itaque quos adipisci corporis maiores?
+        <h2 className="font-bold text-gray-100 text-3xl text-center mb-4">
+          Gostou do meu trabalho?
+        </h2>
+        <p className="text-zinc-200 text-sm mx-auto md:text-base max-w-lg mb-8 text-center">
+          Estou sempre disponível a novas oportunidades e projetos! Mande uma
+          mensagem em uma das redes abaixo.
         </p>
         <div className="flex flex-col gap-4 w-full max-w-md mx-auto">
           {cardsContacts.map((card) => {
             return (
-              <CardContact 
+              <CardContact
                 key={card.name}
-                icon={card.icon}  
+                icon={card.icon}
                 name={card.name}
                 // url={card.url}
               />
-            )
+            );
           })}
         </div>
       </section>
