@@ -1,22 +1,25 @@
 import "./App.css";
 
 import CardTech from "./components/Card-Tech";
+import CardContact from "./components/Card-Contact";
 
+import pythonIcon from "./assets/python-logo.svg";
+import pyTorchIcon from "./assets/pytorch-logo.svg";
+import scikitLearnIcon from "./assets/scikit-learn-logo.svg";
+import pandasIcon from "./assets/pandas-logo.svg";
 import jsIcon from "./assets/js-logo.svg";
 import tsIcon from "./assets/ts-logo.svg";
 import reactIcon from "./assets/react-logo.svg";
 import nodeIcon from "./assets/node-logo.svg";
+import flutterIcon from "./assets/flutter-logo.svg";
 import htmlIcon from "./assets/html-logo.svg";
 import cssIcon from "./assets/css-logo.svg";
 import gitIcon from "./assets/git-logo.svg";
-import pythonIcon from "./assets/python-logo.svg";
-import flutterIcon from "./assets/flutter-logo.svg";
 import CardProject from "./components/Card-Project";
 import linkedinIcon from "./assets/linkedin-logo.svg";
 import instagramIcon from "./assets/instagram-logo.svg";
 import gitHubIcon from "./assets/github-logo.svg";
 import emailIcon from "./assets/envelope-logo.svg";
-import CardContact from "./components/Card-Contact";
 
 export default function App() {
   const projects = [
@@ -43,9 +46,9 @@ export default function App() {
       title: "IA & Machine Learning",
       skills: [
         { nameTech: "Python", icon: pythonIcon },
-        { nameTech: "Pytorch", icon: tsIcon },
-        { nameTech: "Scikit-Learn", icon: reactIcon },
-        { nameTech: "Pandas", icon: nodeIcon },
+        { nameTech: "Pytorch", icon: pyTorchIcon },
+        { nameTech: "Scikit-Learn", icon: scikitLearnIcon },
+        { nameTech: "Pandas", icon: pandasIcon },
       ],
     },
     {
@@ -72,43 +75,53 @@ export default function App() {
     {
       icon: linkedinIcon,
       name: "Linkedin",
+      url: "https://www.linkedin.com/in/willian-furtado-dev/",
     },
     {
       icon: instagramIcon,
       name: "Instagram",
+      url: "https://www.instagram.com/j.souza11_",
     },
     {
       icon: gitHubIcon,
       name: "GitHub",
+      url: "https://github.com/willianfurtado",
     },
     {
       icon: emailIcon,
       name: "E-mail",
+      url: "mailto:willianjfurtado19@gmail.com?subject=Contato%20via%20Portfolio",
     },
+  ];
+
+  const navItems = [
+    { name: "Sobre", href: "#sobre" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projetos", href: "#projetos" },
+    { name: "Contato", href: "#contato" },
   ];
 
   return (
     <div className="p-8 bg-[#16181d]">
       <nav className="flex justify-center items-center w-full">
         <ul className="flex items-center gap-8 font-bold text-gray-100">
-          <li>
-            <a href="#">Sobre</a>
+         {navItems.map((item) => (
+          <li key={item.name}>
+            <a 
+              href={item.href}
+              className="relative py-1 hover:text-white transition-colors duration-200 group"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full" />
+            </a>
           </li>
-          <li>
-            <a href="#">Skills</a>
-          </li>
-          <li>
-            <a href="#">Projetos</a>
-          </li>
-          <li>
-            <a href="#">Contatos</a>
-          </li>
+         ))}
         </ul>
       </nav>
 
       {/* Seção principal de apresentação */}
       <main className="flex items-center justify-center min-h-[85vh] py-12 px-6 max-w-6xl mx-auto w-full">
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full" id="sobre">
           {/* Lado Esquerdo: Conteúdo */}
           <div className="flex flex-col gap-5 items-start">
             {/* Título e Cargo */}
@@ -163,7 +176,7 @@ export default function App() {
       </main>
 
       {/* Seção de skills */}
-      <section className="flex flex-col items-center py-16 px-4">
+      <section className="flex flex-col items-center py-16 px-4" id="skills">
         <h2 className="font-bold text-3xl md:text-4xl text-center mb-10 text-white">
           Skills
         </h2>
@@ -216,7 +229,7 @@ export default function App() {
       </section>
 
       {/* Seção de contato */}
-      <section className="">
+      <section className="" id="contato">
         <h2 className="font-bold text-gray-100 text-3xl text-center mb-4">
           Gostou do meu trabalho?
         </h2>
@@ -231,7 +244,7 @@ export default function App() {
                 key={card.name}
                 icon={card.icon}
                 name={card.name}
-                // url={card.url}
+                url={card.url}
               />
             );
           })}
