@@ -27,16 +27,57 @@ export default function App() {
       name: "MentisAI",
       description:
         "Plataforma inteligente para análise preditiva utilizando modelos de Machine Learning e processamento de dados em tempo real.",
-      tags: ["Python", "PyTorch", "React", "TypeScript"],
+      tags: ["Flutter", "Python", "Sklearn", "Pandas"],
       githubUrl: "https://github.com/willianfurtado/mentisAI",
-      image: "/src/assets/projects/mentis.png", // opcional
+      image: "/src/assets/mentis.png", 
     },
     {
-      name: "Portfolio Dev",
+      name: "Site do Jifma",
       description:
-        "Portfólio interativo construído com React, Tailwind CSS e TypeScript para apresentar projetos e competências de software.",
+        "Aplicação web para cobertura do JIFMA, oferecendo consulta simplificada de equipes participantes, tabela de partidas e resultados dos jogos.",
       tags: ["React", "TypeScript", "Tailwind"],
-      githubUrl: "https://github.com/seu-usuario/portfolio",
+      githubUrl: "https://github.com/willianfurtado/jifma-website",
+      image: "src/assets/jifma.png"
+    },
+    // {
+    //   name: "Preditor de cotações",
+    //   description:
+    //     "Modelo que analisa dados históricos e séries temporais para prever a cotação da arroba do boi gordo, auxiliando na tomada de decisões financeiras.",
+    //   tags: ["Python", "TensorFlow", "Pandas"],
+    //   githubUrl: "https://github.com/willianfurtado/preditor-cota-es-machine-learning-",
+    //   image: "src/assets/pred-cot.png"
+    // },
+    {
+      name: "Detecção de Emoção com YOLO",
+      description:
+        "Projeto de Visão Computacional voltado para a detecção de emoções faciais usando modelos YOLO e a biblioteca OpenCV",
+      tags: ["Python", "YOLO", "OpenCV"],
+      githubUrl: "https://github.com/willianfurtado/emotion-detection-with-yolo",
+      image: "src/assets/emotion-detection.png"
+    },
+    {
+      name: "Scraper de Commodities",
+      description:
+        "Sistema móvel para consulta de cotações de commodities em tempo real, combinando automação de coleta de dados de mercado e sincronização contínua de informações",
+      tags: ["React Native", "Google Apps Script"],
+      githubUrl: "https://github.com/willianfurtado/scraping",
+      image: "src/assets/scraper.png"
+    },
+    {
+      name: "Rede Convolucional com CIFAR-100",
+      description:
+        "Implementação de uma rede CNN para classificação de imagens usando o dataset CIFAR-100",
+      tags: ["Python", "Pytorch", "Google Colab"],
+      githubUrl: "https://github.com/willianfurtado/cnn-cifar100",
+      image: "src/assets/cifar100.png"
+    },
+    {
+      name: "Clusterização para Saúde Mental",
+      description:
+        "Modelo de Clusterização Difusa (Fuzzy C-Means) na tarefa de segmentação de perfis de risco de Depressão",
+      tags: ["Python", "Sklearn", "Google Colab"],
+      githubUrl: "https://github.com/willianfurtado/fuzzy-clustering-to-depression",
+      image: "src/assets/clustering.png"
     },
   ];
 
