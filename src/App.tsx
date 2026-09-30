@@ -2,24 +2,24 @@ import "./App.css";
 
 import CardTech from "./components/Card-Tech";
 import CardContact from "./components/Card-Contact";
-
-import pythonIcon from "/arrow-up-logo.svg";
-import pyTorchIcon from "./pytorch-logo.svg";
-import scikitLearnIcon from "/scikit-learn-logo.svg";
-import pandasIcon from "/pandas-logo.svg";
-import jsIcon from "/js-logo.svg";
-import tsIcon from "/ts-logo.svg";
-import reactIcon from "/react-logo.svg";
-import nodeIcon from "/node-logo.svg";
-import flutterIcon from "/flutter-logo.svg";
-import htmlIcon from "/html-logo.svg";
-import cssIcon from "/css-logo.svg";
-import gitIcon from "/git-logo.svg";
 import CardProject from "./components/Card-Project";
-import linkedinIcon from "/linkedin-logo.svg";
-import instagramIcon from "/instagram-logo.svg";
-import gitHubIcon from "/github-logo.svg";
-import emailIcon from "/envelope-logo.svg";
+
+// import pythonIcon from "/arrow-up-logo.svg";
+// import pyTorchIcon from "./pytorch-logo.svg";
+// import scikitLearnIcon from "/scikit-learn-logo.svg";
+// import pandasIcon from "/pandas-logo.svg";
+// import jsIcon from "/js-logo.svg";
+// import tsIcon from "/ts-logo.svg";
+// import reactIcon from "/react-logo.svg";
+// import nodeIcon from "/node-logo.svg";
+// import flutterIcon from "/flutter-logo.svg";
+// import htmlIcon from "/html-logo.svg";
+// import cssIcon from "/css-logo.svg";
+// import gitIcon from "/git-logo.svg";
+// import linkedinIcon from "/linkedin-logo.svg";
+// import instagramIcon from "/instagram-logo.svg";
+// import gitHubIcon from "/github-logo.svg";
+// import emailIcon from "/envelope-logo.svg";
 
 export default function App() {
   const projects = [
@@ -88,50 +88,50 @@ export default function App() {
     {
       title: "IA & Machine Learning",
       skills: [
-        { nameTech: "Python", icon: pythonIcon },
-        { nameTech: "Pytorch", icon: pyTorchIcon },
-        { nameTech: "Scikit-Learn", icon: scikitLearnIcon },
-        { nameTech: "Pandas", icon: pandasIcon },
+        { nameTech: "Python", icon: "/python-logo.svg" },
+        { nameTech: "Pytorch", icon: "/pytorch-logo.svg" },
+        { nameTech: "Scikit-Learn", icon: "/scikit-learn-logo.svg" },
+        { nameTech: "Pandas", icon: "/pandas-logo.svg" },
       ],
     },
     {
       title: "Desenvolvimento Web & Mobile",
       skills: [
-        { nameTech: "Javascript", icon: jsIcon },
-        { nameTech: "Typescript", icon: tsIcon },
-        { nameTech: "React", icon: reactIcon },
-        { nameTech: "NodeJS", icon: nodeIcon },
-        { nameTech: "Flutter", icon: flutterIcon },
+        { nameTech: "Javascript", icon: "/js-logo.svg" },
+        { nameTech: "Typescript", icon: "/ts-logo.svg" },
+        { nameTech: "React", icon: "/react-logo.svg" },
+        { nameTech: "NodeJS", icon: "/node-logo.svg" },
+        { nameTech: "Flutter", icon: "/flutter-logo.svg" },
       ],
     },
     {
       title: "Ferramentas & Outros",
       skills: [
-        { nameTech: "HTML", icon: htmlIcon },
-        { nameTech: "CSS", icon: cssIcon },
-        { nameTech: "GIT", icon: gitIcon },
+        { nameTech: "HTML", icon: "/html-logo.svg" },
+        { nameTech: "CSS", icon: "/css-logo.svg" },
+        { nameTech: "GIT", icon: "/git-logo.svg" },
       ],
     },
   ];
 
   const cardsContacts = [
     {
-      icon: linkedinIcon,
+      icon: "/linkedin-logo.svg",
       name: "Linkedin",
       url: "https://www.linkedin.com/in/willian-furtado-dev/",
     },
     {
-      icon: instagramIcon,
+      icon: "/instagram-logo.svg",
       name: "Instagram",
       url: "https://www.instagram.com/j.souza11_",
     },
     {
-      icon: gitHubIcon,
+      icon: "/github-logo.svg",
       name: "GitHub",
       url: "https://github.com/willianfurtado",
     },
     {
-      icon: emailIcon,
+      icon: "/email-logo.svg",
       name: "E-mail",
       url: "mailto:willianjfurtado19@gmail.com?subject=Contato%20via%20Portfolio",
     },
