@@ -3,23 +3,23 @@ import "./App.css";
 import CardTech from "./components/Card-Tech";
 import CardContact from "./components/Card-Contact";
 
-import pythonIcon from "./assets/python-logo.svg";
-import pyTorchIcon from "./assets/pytorch-logo.svg";
-import scikitLearnIcon from "./assets/scikit-learn-logo.svg";
-import pandasIcon from "./assets/pandas-logo.svg";
-import jsIcon from "./assets/js-logo.svg";
-import tsIcon from "./assets/ts-logo.svg";
-import reactIcon from "./assets/react-logo.svg";
-import nodeIcon from "./assets/node-logo.svg";
-import flutterIcon from "./assets/flutter-logo.svg";
-import htmlIcon from "./assets/html-logo.svg";
-import cssIcon from "./assets/css-logo.svg";
-import gitIcon from "./assets/git-logo.svg";
+import pythonIcon from "/arrow-up-logo.svg";
+import pyTorchIcon from "./pytorch-logo.svg";
+import scikitLearnIcon from "/scikit-learn-logo.svg";
+import pandasIcon from "/pandas-logo.svg";
+import jsIcon from "/js-logo.svg";
+import tsIcon from "/ts-logo.svg";
+import reactIcon from "/react-logo.svg";
+import nodeIcon from "/node-logo.svg";
+import flutterIcon from "/flutter-logo.svg";
+import htmlIcon from "/html-logo.svg";
+import cssIcon from "/css-logo.svg";
+import gitIcon from "/git-logo.svg";
 import CardProject from "./components/Card-Project";
-import linkedinIcon from "./assets/linkedin-logo.svg";
-import instagramIcon from "./assets/instagram-logo.svg";
-import gitHubIcon from "./assets/github-logo.svg";
-import emailIcon from "./assets/envelope-logo.svg";
+import linkedinIcon from "/linkedin-logo.svg";
+import instagramIcon from "/instagram-logo.svg";
+import gitHubIcon from "/github-logo.svg";
+import emailIcon from "/envelope-logo.svg";
 
 export default function App() {
   const projects = [
@@ -29,7 +29,7 @@ export default function App() {
         "Plataforma inteligente para análise preditiva utilizando modelos de Machine Learning e processamento de dados em tempo real.",
       tags: ["Flutter", "Python", "Sklearn", "Pandas"],
       githubUrl: "https://github.com/willianfurtado/mentisAI",
-      image: "/src/assets/mentis.png",
+      image: "/mentis.png",
     },
     {
       name: "Site do Jifma",
@@ -37,7 +37,7 @@ export default function App() {
         "Aplicação web para cobertura do JIFMA, oferecendo consulta simplificada de equipes participantes, tabela de partidas e resultados dos jogos.",
       tags: ["React", "TypeScript", "Tailwind"],
       githubUrl: "https://github.com/willianfurtado/jifma-website",
-      image: "src/assets/jifma.png",
+      image: "/jifma.png",
     },
     // {
     //   name: "Preditor de cotações",
@@ -45,7 +45,7 @@ export default function App() {
     //     "Modelo que analisa dados históricos e séries temporais para prever a cotação da arroba do boi gordo, auxiliando na tomada de decisões financeiras.",
     //   tags: ["Python", "TensorFlow", "Pandas"],
     //   githubUrl: "https://github.com/willianfurtado/preditor-cota-es-machine-learning-",
-    //   image: "src/assets/pred-cot.png"
+    //   image: "/pred-cot.png"
     // },
     {
       name: "Detecção de Emoção com YOLO",
@@ -54,7 +54,7 @@ export default function App() {
       tags: ["Python", "YOLO", "OpenCV"],
       githubUrl:
         "https://github.com/willianfurtado/emotion-detection-with-yolo",
-      image: "src/assets/emotion-detection.png",
+      image: "/emotion-detection.png",
     },
     {
       name: "Scraper de Commodities",
@@ -62,7 +62,7 @@ export default function App() {
         "Sistema móvel para consulta de cotações de commodities em tempo real, combinando automação de coleta de dados de mercado e sincronização contínua de informações",
       tags: ["React Native", "Google Apps Script"],
       githubUrl: "https://github.com/willianfurtado/scraping",
-      image: "src/assets/scraper.png",
+      image: "/scraper.png",
     },
     {
       name: "Rede Convolucional com CIFAR-100",
@@ -70,7 +70,7 @@ export default function App() {
         "Implementação de uma rede CNN para classificação de imagens usando o dataset CIFAR-100",
       tags: ["Python", "Pytorch", "Google Colab"],
       githubUrl: "https://github.com/willianfurtado/cnn-cifar100",
-      image: "src/assets/cifar100.png",
+      image: "/cifar100.png",
     },
     {
       name: "Clusterização para Saúde Mental",
@@ -79,7 +79,7 @@ export default function App() {
       tags: ["Python", "Sklearn", "Google Colab"],
       githubUrl:
         "https://github.com/willianfurtado/fuzzy-clustering-to-depression",
-      image: "src/assets/clustering.png",
+      image: "/clustering.png",
     },
   ];
 
@@ -212,7 +212,7 @@ export default function App() {
           <div className="relative flex justify-center md:justify-end items-center shrink-0">
             <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-zinc-800/80 shadow-2xl shrink-0">
               <img
-                src="src/assets/my-photo.png"
+                src="/my-photo.png"
                 alt="Willian Jorge"
                 className="w-full h-full object-cover object-[center_20%] scale-110"
               />
