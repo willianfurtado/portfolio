@@ -29,7 +29,7 @@ export default function App() {
         "Plataforma inteligente para análise preditiva utilizando modelos de Machine Learning e processamento de dados em tempo real.",
       tags: ["Flutter", "Python", "Sklearn", "Pandas"],
       githubUrl: "https://github.com/willianfurtado/mentisAI",
-      image: "/src/assets/mentis.png", 
+      image: "/src/assets/mentis.png",
     },
     {
       name: "Site do Jifma",
@@ -37,7 +37,7 @@ export default function App() {
         "Aplicação web para cobertura do JIFMA, oferecendo consulta simplificada de equipes participantes, tabela de partidas e resultados dos jogos.",
       tags: ["React", "TypeScript", "Tailwind"],
       githubUrl: "https://github.com/willianfurtado/jifma-website",
-      image: "src/assets/jifma.png"
+      image: "src/assets/jifma.png",
     },
     // {
     //   name: "Preditor de cotações",
@@ -52,8 +52,9 @@ export default function App() {
       description:
         "Projeto de Visão Computacional voltado para a detecção de emoções faciais usando modelos YOLO e a biblioteca OpenCV",
       tags: ["Python", "YOLO", "OpenCV"],
-      githubUrl: "https://github.com/willianfurtado/emotion-detection-with-yolo",
-      image: "src/assets/emotion-detection.png"
+      githubUrl:
+        "https://github.com/willianfurtado/emotion-detection-with-yolo",
+      image: "src/assets/emotion-detection.png",
     },
     {
       name: "Scraper de Commodities",
@@ -61,7 +62,7 @@ export default function App() {
         "Sistema móvel para consulta de cotações de commodities em tempo real, combinando automação de coleta de dados de mercado e sincronização contínua de informações",
       tags: ["React Native", "Google Apps Script"],
       githubUrl: "https://github.com/willianfurtado/scraping",
-      image: "src/assets/scraper.png"
+      image: "src/assets/scraper.png",
     },
     {
       name: "Rede Convolucional com CIFAR-100",
@@ -69,15 +70,16 @@ export default function App() {
         "Implementação de uma rede CNN para classificação de imagens usando o dataset CIFAR-100",
       tags: ["Python", "Pytorch", "Google Colab"],
       githubUrl: "https://github.com/willianfurtado/cnn-cifar100",
-      image: "src/assets/cifar100.png"
+      image: "src/assets/cifar100.png",
     },
     {
       name: "Clusterização para Saúde Mental",
       description:
         "Modelo de Clusterização Difusa (Fuzzy C-Means) na tarefa de segmentação de perfis de risco de Depressão",
       tags: ["Python", "Sklearn", "Google Colab"],
-      githubUrl: "https://github.com/willianfurtado/fuzzy-clustering-to-depression",
-      image: "src/assets/clustering.png"
+      githubUrl:
+        "https://github.com/willianfurtado/fuzzy-clustering-to-depression",
+      image: "src/assets/clustering.png",
     },
   ];
 
@@ -146,23 +148,26 @@ export default function App() {
     <div className="p-8 bg-[#16181d]">
       <nav className="flex justify-center items-center w-full">
         <ul className="flex items-center gap-8 font-bold text-gray-100">
-         {navItems.map((item) => (
-          <li key={item.name}>
-            <a 
-              href={item.href}
-              className="relative py-1 hover:text-white transition-colors duration-200 group"
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="relative py-1 hover:text-white transition-colors duration-200 group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full" />
-            </a>
-          </li>
-         ))}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
       {/* Seção principal de apresentação */}
       <main className="flex items-center justify-center min-h-[85vh] py-12 px-6 max-w-6xl mx-auto w-full">
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full" id="sobre">
+        <section
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full"
+          id="sobre"
+        >
           {/* Lado Esquerdo: Conteúdo */}
           <div className="flex flex-col gap-5 items-start">
             {/* Título e Cargo */}
@@ -204,12 +209,12 @@ export default function App() {
           </div>
 
           {/* Lado Direito: Foto */}
-          <div className="relative flex justify-center md:justify-end items-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-zinc-800 shadow-2xl">
+          <div className="relative flex justify-center md:justify-end items-center shrink-0">
+            <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-zinc-800/80 shadow-2xl shrink-0">
               <img
                 src="src/assets/my-photo.png"
                 alt="Willian Jorge"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[center_20%] scale-110"
               />
             </div>
           </div>
