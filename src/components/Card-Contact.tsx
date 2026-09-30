@@ -15,7 +15,7 @@ export default function CardContact({ icon, name, url }: iPropsContact) {
         <img src={icon} alt={name} className="w-7 h-7" />
         <span className="font-semibold text-white text-lg">{name}</span>
       </div>
-      <img src="/src/assets/arrow-up-logo.svg" alt="Abrir link" className="w-5 h-5" />
+      <img src="arrow-up-logo.svg" alt="Abrir link" className="w-5 h-5" />
     </a>
   );
 }

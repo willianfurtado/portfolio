@@ -131,7 +131,7 @@ export default function App() {
       url: "https://github.com/willianfurtado",
     },
     {
-      icon: "/email-logo.svg",
+      icon: "/envelope-logo.svg",
       name: "E-mail",
       url: "mailto:willianjfurtado19@gmail.com?subject=Contato%20via%20Portfolio",
     },
